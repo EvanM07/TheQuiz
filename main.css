@@ -97,7 +97,7 @@ nav a:hover {
 }
 h1 {
   text-align: center;
-  color: black;
+  color: black !important;
 }
 h1:hover {
   color: rgb(0, 4, 255);
@@ -328,7 +328,7 @@ img {
     font-size: 16px;
   }
   h1 {
-    color: black;
+    color: black !important;
   }
 
   /* Adjust the padding of the main content */
