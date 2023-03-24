@@ -97,6 +97,7 @@ nav a:hover {
 }
 h1 {
   text-align: center;
+  color: black;
 }
 h1:hover {
   color: rgb(0, 4, 255);
