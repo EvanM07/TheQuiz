@@ -171,6 +171,13 @@ function showQuestion() {
             .join("")}
         </ul>
       `;
+  // Shuffle the quiz array randomly
+  for (let i = quiz.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [quiz[i], quiz[j]] = [quiz[j], quiz[i]];
+  }
+
+  const correctAnswer = question.correctAnswer;
 
   const answerButtons = quizContainer.querySelectorAll(".answer");
   for (let i = 0; i < answerButtons.length; i++) {
