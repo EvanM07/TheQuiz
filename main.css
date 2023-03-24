@@ -57,6 +57,7 @@ header {
   align-items: center;
   background-color: #f66;
   padding: 20px;
+  border-radius: 8px;
 }
 
 nav ul {
@@ -317,5 +318,74 @@ img {
   }
   60% {
     transform: translateY(-5px);
+  }
+}
+/* Smaller screens */
+@media screen and (max-width: 768px) {
+  /* Make the body font size smaller */
+  body {
+    font-size: 16px;
+  }
+
+  /* Adjust the padding of the main content */
+  main {
+    padding: 20px;
+  }
+
+  /* Center the quiz container */
+  .quiz-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* Adjust the font size of the quiz questions and options */
+  .quiz-container h2,
+  .quiz-container label {
+    font-size: 20px;
+  }
+
+  /* Adjust the margin of the quiz options */
+  .quiz-container label {
+    margin: 10px 0;
+  }
+
+  /* Adjust the font size of the submit button */
+  .quiz-container input[type="submit"] {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  /* Adjust the padding of the footer */
+  footer {
+    padding: 20px;
+  }
+
+  /* Adjust the font size of the footer text */
+  footer p {
+    font-size: 14px;
+  }
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.footer-content {
+  margin-bottom: 20px;
+}
+
+a:hover {
+  color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
   }
 }
