@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic HTML Template</title>
+    <meta charset="utf-8" />
+    <meta name="description" content=" " />
+    <meta name="keywords" content=" " />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href=" " type="image/icon" />
+    <link rel="stylesheet" type="text/css" href="./main.css " />
+    <script src="./main.js " defer></script>
+  </head>
+  <body>
+    <div id="home"></div>
+    <header>
+      <h1>My Quiz Site</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>ASVAB General Science Challenge: Test Your Scientific Knowledge!!</h1>
+    <div id="quiz">
+      <!-- quiz questions and answers will be generated here -->
+    </div>
+
+    <button onclick="window.location.reload()" class="retry-button">
+      Retry
+    </button>
+    <div id="progress-bar">
+      <div id="progress-bar-fill"></div>
+    </div>
+
+    <!-- THIS IS THE GOING HOME BUTTON-->
+    <a href="#home" class="home-button">Home</a>
+
+    <div id="quiz-container">
+      <h2>Question 1</h2>
+      <ul>
+        <li><button class="answer">Option 1</button></li>
+        <li><button class="answer">Option 2</button></li>
+        <li><button class="answer">Option 3</button></li>
+        <li><button class="answer">Option 4</button></li>
+      </ul>
+    </div>
+    <br />
+
+    <section id="about">
+      <div class="about-container">
+        <h2>About the ASVAB General Science Quiz</h2>
+        <p>
+          The Armed Services Vocational Aptitude Battery (ASVAB) General Science
+          test assesses your knowledge of scientific concepts across a range of
+          disciplines, including biology, chemistry, physics, and earth science.
+          This quiz is designed to help you practice and prepare for the General
+          Science section of the ASVAB.
+        </p>
+        <p>
+          The quiz consists of 20 multiple-choice questions, each with four
+          possible answers. You will have 30 minutes to complete the quiz. Your
+          score will be displayed at the end of the quiz, and you can review
+          your answers to see which questions you answered correctly and
+          incorrectly.
+        </p>
+        <p>Good luck, and have fun!</p>
+        <div class="image-container">
+          <img src="./car-image.jpg" alt="Car Image" />
+        </div>
+      </div>
+    </section>
+    <section
+      id="contact"
+      style="
+        background-color: rgb(98, 255, 45);
+        color: white;
+        border-radius: 8px;
+      "
+    >
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <footer>
+      <p>&copy; 2023 My Quiz Site</p>
+    </footer>
+
+    <script>
+      /* Add an onclick effect for the retry button */
+      document
+        .querySelector(".retry-button")
+        .addEventListener("click", function () {
+          document.body.style.backgroundColor = "yellow";
+          document.body.style.color = "white";
+        });
+    </script>
+  </body>
+</html>
