@@ -10,7 +10,6 @@
     <link rel="icon" href=" " type="image/icon" />
     <link rel="stylesheet" type="text/css" href="./main.css " />
     <script src="./main.js " defer></script>
-
   </head>
   <body>
     <div id="home"></div>
@@ -24,9 +23,15 @@
         </ul>
       </nav>
     </header>
-    <h1>ASVAB General Science Challenge: Test Your Scientific Knowledge!!</h1>
+    <h1 class="quiz_title">
+      ASVAB General Science Challenge: Test Your Scientific Knowledge!!
+    </h1>
     <div id="quiz">
       <!-- quiz questions and answers will be generated here -->
+    </div>
+
+    <div id="quiz_results">
+      <!-- THIS IS WHERE THE RESULTS OF THE QUIZ WILL BE-->
     </div>
 
     <button onclick="window.location.reload()" class="retry-button">
@@ -39,15 +44,6 @@
     <!-- THIS IS THE GOING HOME BUTTON-->
     <a href="#home" class="home-button">Home</a>
 
-    <div id="quiz-container">
-      <h2>Question 1</h2>
-      <ul>
-        <li><button class="answer">Option 1</button></li>
-        <li><button class="answer">Option 2</button></li>
-        <li><button class="answer">Option 3</button></li>
-        <li><button class="answer">Option 4</button></li>
-      </ul>
-    </div>
     <br />
     <section id="about">
       <div class="about-container">
@@ -60,8 +56,8 @@
           Science section of the ASVAB.
         </p>
         <p>
-          The quiz consists of 20 multiple-choice questions, each with four
-          possible answers. 
+          The quiz consists of many multiple-choice questions, each with four
+          possible answers.
         </p>
         <p>Good luck, and have fun!</p>
         <div class="image-container">
@@ -95,7 +91,6 @@
       </form>
     </section>
     <footer>
-
       <div class="footer-content">
         <h3>Contact Us</h3>
         <p>Email us at:</p>

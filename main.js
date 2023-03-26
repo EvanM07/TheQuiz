@@ -1,277 +1,294 @@
-const quiz = [
+const progressBar = document.getElementById("progress-bar-fill");
+const questions = [
   {
     question:
-      "What is the name for the smallest particle of an element that retains the properties of that element?",
-    answers: ["Ion", "Molecule", "Atom", "Electron"],
-    correct: 2,
-  },
-  {
-    question:
-      "What is the study of the earth's physical structure and substance, its history, and the processes that act on it called?",
-    answers: ["Biology", "Geology", "Astronomy", "Chemistry"],
-    correct: 1,
-  },
-  {
-    question:
-      "What is the process by which plants use sunlight, carbon dioxide, and water to produce oxygen and glucose called?",
-    answers: ["Photosynthesis", "Respiration", "Fermentation", "Digestion"],
-    correct: 0,
-  },
-  {
-    question:
-      "What type of energy is stored in an object due to its position or state?",
-    answers: [
-      "Kinetic energy",
-      "Thermal energy",
-      "Potential energy",
-      "Electrical energy",
-    ],
-    correct: 2,
-  },
-  {
-    question:
-      "What is the substance that speeds up a chemical reaction without being consumed or changed in the reaction called?",
-    answers: ["Substrate", "Catalyst", "Enzyme", "Solvent"],
-    correct: 1,
-  },
-  {
-    question:
-      "What is the study of the relationship between living organisms and their environment called?",
-    answers: ["Biology", "Ecology", "Zoology", "Botany"],
-    correct: 1,
-  },
-  {
-    question:
-      "What is the term for the process by which a gas turns into a liquid?",
-    answers: ["Condensation", "Evaporation", "Melting", "Sublimation"],
-    correct: 0,
-  },
-  {
-    question:
-      "What is the term for a substance that cannot be broken down into simpler substances by chemical means?",
-    answers: ["Element", "Compound", "Mixture", "Solution"],
-    correct: 0,
-  },
-  {
-    question: "What is the unit of electrical resistance?",
-    answers: ["Ohm", "Ampere", "Volt", "Watt"],
-    correct: 0,
-  },
-  {
-    question:
-      "What is the term for the force that opposes motion between two surfaces that are in contact?",
-    answers: ["Gravity", "Friction", "Inertia", "Acceleration"],
-    correct: 1,
-  },
-  {
-    question: "What is the term for a substance that dissolves in water?",
-    answers: ["Soluble", "Insoluble", "Solute", "Solvent"],
-    correct: 0,
-  },
-  {
-    question:
-      "What is the name for the process by which a liquid turns into a gas?",
-    answers: ["Evaporation", "Condensation", "Melting", "Sublimation"],
-    correct: 0,
-  },
-  {
-    question: "What type of energy is associated with motion?",
-    answers: [
-      "Potential energy",
-      "Thermal energy",
-      "Kinetic energy",
-      "Electrical energy",
-    ],
-    correct: 2,
-  },
-  {
-    question:
-      "What is the term for the smallest unit of a compound that retains the properties of that compound?",
-    answers: ["Atom", "Molecule", "Ion", "Element"],
-    correct: 1,
-  },
-  {
-    question: "What is the atomic symbol for iron?",
-    answers: ["Ir", "In", "Fe", "Au"],
-    correct: 2,
-  },
-
-  {
-    question: "What is the chemical formula for water?",
-    answers: ["H2O2", "H2O", "HO2", "O2H"],
-    correct: 1,
-  },
-  {
-    question: "What type of bond forms when atoms share electrons?",
-    answers: ["Ionic", "Covalent", "Metallic", "Hydrogen"],
-    correct: 1,
-  },
-  {
-    question: "What is the study of living organisms called?",
-    answers: ["Ecology", "Botany", "Zoology", "Biology"],
-    correct: 3,
-  },
-  {
-    question: "Which of the following is a chemical change?",
-    answers: [
-      "Bending a wire",
-      "Melting an ice cube",
-      "Mixing sugar and water",
-      "Burning wood",
-    ],
-    correct: 3,
-  },
-  {
-    question: "Which of the following is an example of kinetic energy?",
-    answers: [
-      "A book on a shelf",
-      "A compressed spring",
-      "A battery",
-      "A moving car",
-    ],
-    correct: 3,
-  },
-  {
-    question: "What is the primary source of energy for most living organisms?",
-    answers: ["Oxygen", "Carbon", "Water", "Sunlight"],
-    correct: 3,
-  },
-  {
-    question: "Which of the following is a greenhouse gas?",
-    answers: ["Oxygen", "Carbon dioxide", "Nitrogen", "Methane"],
-    correct: 1,
+      "What is the process by which plants convert sunlight into energy?",
+    answers: ["Photosynthesis", "Respiration", "Transpiration", "Evaporation"],
+    correctAnswer: 0,
   },
   {
     question: "What is the SI unit of force?",
-    answers: ["Watt", "Joule", "Newton", "Pascal"],
-    correct: 2,
+    answers: ["Joule", "Newton", "Watt", "Hertz"],
+    correctAnswer: 1,
   },
   {
-    question: "What type of waves are used in cellular communication?",
-    answers: ["Sound waves", "X-rays", "Gamma rays", "Radio waves"],
-    correct: 3,
+    question:
+      "What is the process of boiling and condensing a substance to purify it?",
+    answers: [
+      "Filtration",
+      "Distillation",
+      "Crystallization",
+      "Chromatography",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is the smallest unit of matter?",
+    answers: ["Atom", "Molecule", "Cell", "Electron"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the layer of the Earth's atmosphere that protects us from harmful UV rays?",
+    answers: ["Mesosphere", "Stratosphere", "Troposphere", "Exosphere"],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is the process by which liquids turn into gas?",
+    answers: ["Condensation", "Evaporation", "Sublimation", "Melting"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "What is the process by which rocks are broken down into smaller pieces?",
+    answers: ["Erosion", "Weathering", "Deposition", "Transportation"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "What is the study of the distribution and movement of water on Earth?",
+    answers: ["Meteorology", "Climatology", "Hydrology", "Geology"],
+    correctAnswer: 2,
+  },
+  {
+    question: "What is the term for the resistance of a fluid to flow?",
+    answers: ["Viscosity", "Inertia", "Friction", "Gravity"],
+    correctAnswer: 0,
+  },
+  {
+    question: "What is the chemical symbol for gold?",
+    answers: ["Au", "Ag", "Cu", "Fe"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the term for a chemical reaction in which an acid and a base react to form a salt and water?",
+    answers: ["Oxidation", "Reduction", "Neutralization", "Hydrolysis"],
+    correctAnswer: 2,
+  },
+  {
+    question:
+      "What is the process by which energy is released from glucose in the absence of oxygen?",
+    answers: ["Photosynthesis", "Respiration", "Fermentation", "Transpiration"],
+    correctAnswer: 2,
+  },
+  {
+    question: "What is the study of the Earth's magnetic field?",
+    answers: ["Geomagnetism", "Geography", "Geology", "Meteorology"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the term for the phenomenon in which light is bent as it passes through a medium?",
+    answers: ["Refraction", "Reflection", "Diffraction", "Interference"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the study of the structure, function, and diseases of the heart?",
+    answers: ["Cardiology", "Dermatology", "Neurology", "Oncology"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the term for the force per unit area exerted by a gas on a surface?",
+    answers: ["Pressure", "Temperature", "Volume", "Density"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the process by which an electric current is produced from a chemical reaction?",
+    answers: [
+      "Electrolysis",
+      "Electromagnetism",
+      "Electroplating",
+      "Electrochemical cell",
+    ],
+    correctAnswer: 3,
+  },
+  {
+    question:
+      "What is the term for the change of state from solid directly to gas?",
+    answers: ["Sublimation", "Melting", "Evaporation", "Condensation"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the process by which plants convert sunlight into energy?",
+    answers: ["Photosynthesis", "Respiration", "Transpiration", "Evaporation"],
+    correctAnswer: 0,
+  },
+  {
+    question: "What is the SI unit of force?",
+    answers: ["Joule", "Newton", "Watt", "Hertz"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "What is the process of boiling and condensing a substance to purify it?",
+    answers: [
+      "Filtration",
+      "Distillation",
+      "Crystallization",
+      "Chromatography",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is the smallest unit of matter?",
+    answers: ["Atom", "Molecule", "Cell", "Electron"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the layer of the Earth's atmosphere that protects us from harmful UV rays?",
+    answers: ["Mesosphere", "Stratosphere", "Troposphere", "Exosphere"],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is the process by which liquids turn into gas?",
+    answers: ["Condensation", "Evaporation", "Sublimation", "Melting"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "What is the process by which rocks are broken down into smaller pieces?",
+    answers: ["Erosion", "Weathering", "Deposition", "Transportation"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "What is the study of the distribution and movement of water on Earth?",
+    answers: ["Meteorology", "Climatology", "Hydrology", "Geology"],
+    correctAnswer: 2,
+  },
+  {
+    question: "What is the term for the resistance of a fluid to flow?",
+    answers: ["Viscosity", "Inertia", "Friction", "Gravity"],
+    correctAnswer: 0,
+  },
+  {
+    question: "What is the chemical symbol for gold?",
+    answers: ["Au", "Ag", "Cu", "Fe"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the process by which water changes from a gas to a liquid?",
+    answers: ["Condensation", "Evaporation", "Sublimation", "Melting"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the term for the process by which organisms produce offspring that are genetically identical to themselves?",
+    answers: ["Fertilization", "Meiosis", "Mitosis", "Cloning"],
+    correctAnswer: 3,
   },
 ];
-const quizContainer = document.querySelector("#quiz-container");
-const progressBar = document.querySelector("#progress-bar");
-let currentQuestion = 0;
-let numCorrectAnswers = 0;
 
-function showQuestion() {
-  const question = quiz[currentQuestion];
-  quizContainer.innerHTML = `
-        <h2>${question.question}</h2>
-        <ul>
-          ${question.answers
-            .map(function (answer, index) {
-              return `
-              <li><button class="answer">${answer}</button></li>
-            `;
-            })
-            .join("")}
-        </ul>
-      `;
-  // Shuffle the quiz array randomly
-  for (let i = quiz.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [quiz[i], quiz[j]] = [quiz[j], quiz[i]];
+window.addEventListener("load", function () {
+  document.querySelector(".quiz_title").classList.add("animate");
+});
+
+let currentQuestionIndex = 0;
+let correctAnswers = 0;
+let unansweredQuestions = [...Array(questions.length).keys()];
+
+// function to shuffle an array using the Fisher-Yates algorithm. Once all the questions have been
+// answered the list will start from the beginning and shuffle from there
+function shuffle(array, startIndex = 0) {
+  if (startIndex >= array.length) {
+    startIndex = 0;
   }
+  for (let i = array.length - 1; i > startIndex; i--) {
+    const j = Math.floor(Math.random() * (i - startIndex + 1)) + startIndex;
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
-  const correctAnswer = question.correctAnswer;
+function displayQuestion() {
+  const currentQuestion = questions[currentQuestionIndex];
+  const questionElement = document.createElement("div");
+  questionElement.classList.add("question");
 
-  const answerButtons = quizContainer.querySelectorAll(".answer");
-  for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].addEventListener("click", () => {
-      const isCorrect = i === question.correct;
-      if (isCorrect) {
-        document.body.style.backgroundColor = "green";
-        numCorrectAnswers++;
+  const questionTextElement = document.createElement("p");
+  questionTextElement.textContent = currentQuestion.question;
+  questionElement.appendChild(questionTextElement);
+
+  const answersElement = document.createElement("div");
+  answersElement.classList.add("answers");
+
+  currentQuestion.answers.forEach((answer, index) => {
+    const answerElement = document.createElement("button");
+    answerElement.classList.add("answer");
+    answerElement.textContent = answer;
+    answerElement.addEventListener("click", () => {
+      if (index === currentQuestion.correctAnswer) {
+        answerElement.classList.add("correct");
+        setTimeout(() => {
+          answerElement.classList.remove("correct");
+          document.body.style.backgroundColor = " ";
+          goToNextQuestion();
+        }, 1000);
+        const correctAnswerElement = document.createElement("p");
+        correctAnswerElement.textContent = `You are correct!`;
+        questionElement.appendChild(correctAnswerElement);
+
+        correctAnswers++;
       } else {
-        document.body.style.backgroundColor = "red";
+        setTimeout(() => {
+          answerElement.classList.remove("wrong");
+          goToNextQuestion();
+        }, 2000);
+        const correctAnswerElement = document.createElement("p");
+        correctAnswerElement.classList.add("correct-answer");
+        correctAnswerElement.textContent = `The correct answer was ${
+          currentQuestion.answers[currentQuestion.correctAnswer]
+        }`;
+        questionElement.appendChild(correctAnswerElement);
       }
-      answerButtons.forEach((b) => {
-        b.disabled = true;
-      });
-      setTimeout(() => {
-        document.body.style.transition = "background-color 1s ease";
-        document.body.style.backgroundColor = "";
-        currentQuestion++;
-        if (currentQuestion < quiz.length) {
-          showQuestion();
-          updateProgressBar();
-        } else {
-          quizContainer.innerHTML = "<h2>Quiz completed!</h2>";
-          showResults();
-        }
-      }, 2000);
     });
-  }
-  updateProgressBar();
+    answersElement.appendChild(answerElement);
+  });
+
+  questionElement.appendChild(answersElement);
+  const quizElement = document.getElementById("quiz");
+  quizElement.innerHTML = "";
+  quizElement.appendChild(questionElement);
 }
 
 function updateProgressBar() {
-  const progressPercent = (currentQuestion / quiz.length) * 100;
-  progressBar.style.width = `${progressPercent}%`;
-  if (progressPercent > 50) {
-    progressBar.classList.add("done");
+  const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+  progressBar.style.width = `${progress}%`;
+}
+function goToNextQuestion() {
+  unansweredQuestions.splice(
+    unansweredQuestions.indexOf(currentQuestionIndex),
+    1
+  );
+  if (unansweredQuestions.length === 0) {
+    shuffle(questions);
+    unansweredQuestions = [...Array(questions.length).keys()];
+    currentQuestionIndex = unansweredQuestions[0];
+    showResults();
+    return;
   }
+  currentQuestionIndex = unansweredQuestions[0];
+  updateProgressBar();
+  displayQuestion();
 }
 
-showQuestion();
 function showResults() {
-  let score = 0;
-  const totalQuestions = quiz.length;
-  quiz.forEach((question, index) => {
-    const answerButton =
-      quizContainer.querySelectorAll(".answer")[question.correct];
-    if (answerButton.classList.contains("selected")) {
-      answerButton.classList.remove("selected");
-      if (index < totalQuestions - 1) {
-        currentQuestion++;
-        showQuestion();
-      } else {
-        quizContainer.innerHTML = "<h2>Quiz completed!</h2>";
-        const correctAnswers = quiz.filter((question, index) => {
-          return (
-            question.correct ===
-            document.querySelectorAll(".selected")[index].parentNode.parentNode
-              .dataset.index
-          );
-        });
-        score = correctAnswers.length;
-        const ctx = document.getElementById("myChart").getContext("2d");
-        const myChart = new Chart(ctx, {
-          type: "pie",
-          data: {
-            labels: ["Correct", "Incorrect"],
-            datasets: [
-              {
-                label: "# of Votes",
-                data: [score, totalQuestions - score],
-                backgroundColor: [
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(255, 99, 132, 0.2)",
-                ],
-                borderColor: ["rgba(75, 192, 192, 1)", "rgba(255, 99, 132, 1)"],
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                },
-              ],
-            },
-          },
-        });
-      }
-    }
-  });
+  const quizElement = document.getElementById("quiz_results");
+  quizElement.innerHTML = "";
+  const resultsElement = document.createElement("div");
+  resultsElement.classList.add("results");
+  const scoreElement = document.createElement("h4");
+  scoreElement.textContent = `You got ${correctAnswers} out of ${questions.length} questions correct.`;
+  resultsElement.appendChild(scoreElement);
+  quizElement.appendChild(resultsElement);
 }
+
+displayQuestion();
+updateProgressBar();
