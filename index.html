@@ -1,82 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Basic HTML Template</title>
+    <title>Science Quiz</title>
     <meta charset="utf-8" />
-    <meta name="description" content=" " />
-    <meta name="keywords" content=" " />
+    <meta name="description" content=" This is a 30 question quiz website  " />
+    <meta name="keywords" content=" quiz, questions" />
     <meta name="color-scheme" content="dark light" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href=" " type="image/icon" />
+    <link rel="icon" href="./image_two.png " type="image/icon" />
     <link rel="stylesheet" type="text/css" href="./main.css " />
     <script src="./main.js " defer></script>
   </head>
   <body>
     <div id="home"></div>
     <header>
-      <h1>My Quiz Site</h1>
+      <h1>Science Rocks!</h1>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="#quiz_nav">Quiz</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <h1 class="quiz_title">
-      ASVAB General Science Challenge: Test Your Scientific Knowledge!!
-    </h1>
-    <div id="quiz">
-      <!-- quiz questions and answers will be generated here -->
-    </div>
+    <br />
 
-    <div id="quiz_results">
-      <!-- THIS IS WHERE THE RESULTS OF THE QUIZ WILL BE-->
-    </div>
+    <section id="about">
+      <div class="about-container">
+        <h2>About This Quiz</h2>
+        <div class="about_paragraph_container">
+          <p>
+            Get ready to test your knowledge with this lively quiz! Dive into a
+            world of scientific wonders and curious facts that will leave you
+            amazed and entertained. From unraveling the mysteries of matter's
+            tiniest building blocks to uncovering the layers of Earth's protective
+            shield in the sky, these questions will whisk you away on an
+            educational adventure. Ever wondered how rocks play hide-and-seek in
+            the grand scheme of things? Or how plants whip up energy from
+            sunlight? It's all here, sprinkled with a dash of science magic. So,
+            are you ready to flex those brain muscles and conquer questions about
+            everything from atoms to zany phenomena? Let's embark on a quest of
+            learning and fun!
+          </p>
+          <p>The quiz has 30 multiple-choice questions</p>
+          <p>Good luck, and have fun!</p>
 
-    <button onclick="window.location.reload()" class="retry-button">
-      Retry
-    </button>
-    <div id="progress-bar">
-      <div id="progress-bar-fill"></div>
-    </div>
+        </div>
+        <div class="image-container">
+          <img src="./image_one.png" alt="Image with smaller images inside of it" />
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz_container">
+      <div id="quiz_nav"></div>
+      <h1 class="quiz_title">
+        Test your knowledge about various science questions
+      </h1>
+      <div id="quiz">
+        <!-- quiz questions and answers will be generated here -->
+      </div>
+  
+      <div id="quiz_results">
+        <!-- THIS IS WHERE THE RESULTS OF THE QUIZ WILL BE-->
+      </div>
+  
+      <button onclick="window.location.reload() " class="retry-button">
+        Retry
+      </button>
+      <div id="progress-bar">
+        <div id="progress-bar-fill"></div>
+      </div>
+
+    </section>
+
 
     <!-- THIS IS THE GOING HOME BUTTON-->
     <a href="#home" class="home-button">Home</a>
 
-    <br />
-    <section id="about">
-      <div class="about-container">
-        <h2>About the ASVAB General Science Quiz</h2>
-        <p>
-          The Armed Services Vocational Aptitude Battery (ASVAB) General Science
-          test assesses your knowledge of scientific concepts across a range of
-          disciplines, including biology, chemistry, physics, and earth science.
-          This quiz is designed to help you practice and prepare for the General
-          Science section of the ASVAB.
-        </p>
-        <p>The quiz consists of 30 multiple-choice questions.</p>
-        <p>Good luck, and have fun!</p>
-        <div class="image-container">
-          <img src="./car-image.jpg" alt="Car Image" />
-        </div>
-      </div>
-    </section>
-    <section
-      id="contact"
-      style="
-        background-color: rgb(98, 255, 45);
-        color: white;
-        border-radius: 8px;
-      "
-    >
-      <h2>Contact Me</h2>
+    <!-- THIS IS THE CONTACT ME SECTION-->
+    <section id="contact">
+      <h2>Let Me Know What Subject You Would Like To See Next!</h2>
       <form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
-
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required />
 
         <label for="date">Date:</label>
         <input type="date" id="date" name="date" required />
@@ -87,32 +94,20 @@
         <button type="submit">Submit</button>
       </form>
     </section>
+
+
     <footer>
       <div class="footer-content">
         <h3>Contact Us</h3>
         <p>Email us at:</p>
-        <a href="mailto:info@example.com">info@uhhhh.com</a>
+        <a href="mailto:info@example.com">morequizes@quizes.com</a>
       </div>
       <div class="footer-content">
         <h3>More Info</h3>
-        <p>
-          This quiz was created by Chat GPT <br />
-          The the questions have not been double checked yet, so the questions might be wrong <br />
-          * This site is not affiliated with or endorsed <br />
-          by the Armed Services Vocational Aptitude Battery testing program<br />
-          or the US military.
-        </p>
+        <p> Made 2023 Jan</p>
       </div>
     </footer>
 
-    <script>
-      /* Add an onclick effect for the retry button */
-      document
-        .querySelector(".retry-button")
-        .addEventListener("click", function () {
-          document.body.style.backgroundColor = "yellow";
-          document.body.style.color = "white";
-        });
-    </script>
+
   </body>
 </html>

@@ -194,19 +194,6 @@ let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let unansweredQuestions = [...Array(questions.length).keys()];
 
-// function to shuffle an array using the Fisher-Yates algorithm. Once all the questions have been
-// answered the list will start from the beginning and shuffle from there
-function shuffle(array, startIndex = 0) {
-  if (startIndex >= array.length) {
-    startIndex = 0;
-  }
-  for (let i = array.length - 1; i > startIndex; i--) {
-    const j = Math.floor(Math.random() * (i - startIndex + 1)) + startIndex;
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
   const questionElement = document.createElement("div");
@@ -243,7 +230,7 @@ function displayQuestion() {
         }, 2000);
         const correctAnswerElement = document.createElement("p");
         correctAnswerElement.classList.add("correct-answer");
-        correctAnswerElement.textContent = `The correct answer was ${
+        correctAnswerElement.textContent = `The correct answer is ${
           currentQuestion.answers[currentQuestion.correctAnswer]
         }`;
         questionElement.appendChild(correctAnswerElement);
@@ -268,7 +255,6 @@ function goToNextQuestion() {
     1
   );
   if (unansweredQuestions.length === 0) {
-    shuffle(questions);
     unansweredQuestions = [...Array(questions.length).keys()];
     currentQuestionIndex = unansweredQuestions[0];
     showResults();
