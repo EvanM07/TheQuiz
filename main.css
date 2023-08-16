@@ -88,20 +88,12 @@ h2 {
   font-size: 1.7rem;
 }
 
-.image-container {
+#about_image {
   margin-top: 20px;
-  max-width: 100%;
-  overflow: hidden;
-  width: 400px;
-  height: 400px;
   border-radius: 8px;
   box-shadow: 3px 3px white;
-}
-
-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 /* Styling for the Quiz container, title,  questions, and correct 
@@ -425,5 +417,48 @@ a:hover {
 @media only screen and (max-width: 769px) {
   .footer-content {
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about_paragraph_container {
+    max-width: fit-content;
+  }
+
+  .about_paragraph_container p {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav li {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+ .about-container h2 {
+  font-size: 1.7rem;
+ }
+ .quiz_title {
+  font-size: 1.5rem;
+ }
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 363px) {
+  header h1 {
+    font-size: 1rem;
+  }
+  nav li {
+    font-size: 0.8rem;
   }
 }
