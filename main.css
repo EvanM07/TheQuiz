@@ -439,17 +439,10 @@ a:hover {
   #contact h2 {
     font-size: 1.5rem;
   }
-  .about_paragraph_container :nth-child(3) {
+  .about_paragraph_container p :nth-child(3) {
     font-size: 1.4rem;
   }
 
-
-  
-
-  /* THIS IS TESTING TO SEE IF THE PARAGRAPH WILL SPAN THE FULL WIDTH OF THE CONTAINER. */
-  .full-width-paragraph {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 400px) {
