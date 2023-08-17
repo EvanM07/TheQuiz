@@ -54,7 +54,7 @@ nav a:hover {
   color: #fff0b3;
 }
 
-/* This is Styling For the About Section */
+/* This is Styling For the About Section, and the paragraphs */
 #about {
   background-color: teal;
   border-radius: 8px;
@@ -428,38 +428,42 @@ a:hover {
     font-size: 1rem;
     text-align: left;
   }
-
-@media screen and (max-width: 430px) {
- .about-container h2 {
-  font-size: 1.7rem;
- }
- .quiz_title {
-  font-size: 1.5rem;
- }
-  #contact h2 {
-    font-size: 1.5rem;
-  }
-  .about_paragraph_container p :nth-child(3) {
-    font-size: 1.4rem;
+  .about-container p:nth-child(1) {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
   }
 
-}
+  @media screen and (max-width: 430px) {
+    .about-container h2 {
+      font-size: 1.7rem;
+    }
+    .quiz_title {
+      font-size: 1.5rem;
+    }
+    #contact h2 {
+      font-size: 1.5rem;
+    }
+    .about_paragraph_container p :nth-child(3) {
+      font-size: 1.4rem;
+    }
+  }
 
-@media screen and (max-width: 400px) {
-  header h1 {
-    font-size: 1.5rem;
+  @media screen and (max-width: 400px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav li {
+      font-size: 1rem;
+    }
   }
-  nav li {
-    font-size: 1rem;
-  }
-}
 
-@media screen and (max-width: 363px) {
-  header h1 {
-    font-size: 1rem;
+  @media screen and (max-width: 363px) {
+    header h1 {
+      font-size: 1rem;
+    }
+    nav li {
+      font-size: 0.8rem;
+    }
   }
-  nav li {
-    font-size: 0.8rem;
-  }
-}
 }
