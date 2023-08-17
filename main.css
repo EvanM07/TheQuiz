@@ -83,7 +83,7 @@ h2 {
   text-align: center;
   font-size: 1.2rem;
 }
-.about_paragraph_container :nth-child(3) {
+.about_paragraph_container:nth-child(3) {
   font-size: 1.7rem;
 }
 
@@ -433,6 +433,28 @@ a:hover {
     padding-right: 0px;
     margin: 0;
   }
+  @media screen and (max-width: 500px) {
+
+    #contact h2 {
+      font-size: 1.3rem;
+    }
+    #contact label:nth-child(1) {
+      margin-top:-30px;
+
+    }
+    #name {
+      margin-bottom: 0px !important;
+      margin-top: -15px !important;
+    }
+    #date {
+      margin-bottom: 0px !important;
+      margin-top: -15px !important;
+    }
+    #comment {
+      margin-top: -15px !important;
+    }
+
+  }
 
   @media screen and (max-width: 430px) {
     .about-container h2 {
@@ -441,10 +463,7 @@ a:hover {
     .quiz_title {
       font-size: 1.5rem;
     }
-    #contact h2 {
-      font-size: 1.5rem;
-    }
-    .about_paragraph_container p :nth-child(3) {
+    .about_paragraph_container p:nth-child(3) {
       font-size: 1.4rem;
     }
   }
