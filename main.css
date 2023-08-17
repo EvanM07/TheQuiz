@@ -431,16 +431,26 @@ a:hover {
     font-size: 1rem;
     text-align: left;
   }
+
+
+
+
+  
+
+
+  /* THIS IS FOR TESTING **********************
+  **********************************/
+  header h1 {
+    color: white;
+    text-decoration: line-through;
+  }
 }
 
-@media screen and (max-width: 400px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  nav li {
-    font-size: 1rem;
-  }
-}
+
+
+
+
+
 
 @media screen and (max-width: 430px) {
  .about-container h2 {
@@ -451,6 +461,15 @@ a:hover {
  }
   #contact h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav li {
+    font-size: 1rem;
   }
 }
 
