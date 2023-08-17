@@ -62,7 +62,6 @@ nav a:hover {
 }
 
 .about-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -426,31 +425,9 @@ a:hover {
   }
 
   .about_paragraph_container p {
-    padding-left: 0px;
-    padding-right: 0px;
     font-size: 1rem;
     text-align: left;
   }
-
-
-
-
-  
-
-
-  /* THIS IS FOR TESTING **********************
-  **********************************/
-  header h1 {
-    color: white;
-    text-decoration: line-through;
-  }
-}
-
-
-
-
-
-
 
 @media screen and (max-width: 430px) {
  .about-container h2 {
@@ -461,6 +438,9 @@ a:hover {
  }
   #contact h2 {
     font-size: 1.5rem;
+  }
+  .about_paragraph_container :nth-child(3) {
+    font-size: 1.4rem;
   }
 }
 
@@ -480,4 +460,5 @@ a:hover {
   nav li {
     font-size: 0.8rem;
   }
+}
 }
