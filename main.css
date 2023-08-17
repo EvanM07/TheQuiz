@@ -58,7 +58,8 @@ nav a:hover {
 #about {
   background-color: teal;
   border-radius: 8px;
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .about-container {
@@ -426,13 +427,8 @@ a:hover {
 
   .about_paragraph_container p {
     font-size: 1rem;
-    text-align: left;
   }
-  .about-container p:nth-child(1) {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0;
-  }
+  
   @media screen and (max-width: 500px) {
 
     #contact h2 {
@@ -465,6 +461,13 @@ a:hover {
     }
     .about_paragraph_container p:nth-child(3) {
       font-size: 1.4rem;
+    }
+    .about_paragraph_container p:nth-child(1) {
+    padding: 5px;
+    }
+    .answer {
+      margin: 0 auto;
+      margin-bottom: 10px;
     }
   }
 
